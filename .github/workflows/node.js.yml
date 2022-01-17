@@ -14,10 +14,6 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    defaults:
-      run:
-        working-directory: ./ui
-
     strategy:
       matrix:
         node-version: [12.x]
@@ -30,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd ui && npm ci
-    - run: cd ui && npm run build --if-present
-    - run: cd ui && npm test
+        cache-dependency-path: ui/package-lock.json
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
