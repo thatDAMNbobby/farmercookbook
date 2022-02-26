@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=testing-password
+    ports:
+      - "8000"
+
+  elastic:
+    image: elasticsearch:7.16.3
+    environment:
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200"
+      - "9300"
