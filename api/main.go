@@ -1,28 +1,32 @@
-package api
+package main
 
 import (
 	"context"
 	log "github.com/sirupsen/logrus"
+	"github.com/thatDAMNbobby/farmercookbook/appcontext"
+	"github.com/thatDAMNbobby/farmercookbook/config"
+	"github.com/thatDAMNbobby/farmercookbook/servers"
+	"github.com/thatDAMNbobby/farmercookbook/servers/runnable"
+	"github.com/thatDAMNbobby/farmercookbook/utils"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
-	"untitled_side_project/appcontext"
 )
 
-//func main() {
-//	configImpl := config.Loader()
-//	log.SetReportCaller(configImpl.LogLevel == log.TraceLevel)
-//	log.SetLevel(configImpl.LogLevel)
+func main() {
+	configImpl := config.Loader()
+	log.SetReportCaller(configImpl.LogLevel == log.TraceLevel)
+	log.SetLevel(configImpl.LogLevel)
 	utils.PrintDebugJSON("config", configImpl)
-	//appcontextImpl := appcontext.New(configImpl)
+	appcontextImpl := appcontext.New(configImpl)
 
-	//serversImpl := servers.New(
-	//	&servers.Deps{Handlers: appcontextImpl.Handlers},
-	//	&configImpl.Server,
-	//)
-	//
-	//waitForInterrupts(configImpl.Name, serversImpl, appcontextImpl)
+	serversImpl := servers.New(
+		&servers.Deps{Handlers: appcontextImpl.Handlers},
+		&configImpl.Server,
+	)
+
+	waitForInterrupts(configImpl.Name, serversImpl, appcontextImpl)
 }
 
 func waitForInterrupts(name string, servers runnable.Runnable, appcontext runnable.Runnable) {

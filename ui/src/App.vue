@@ -4,12 +4,30 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Recipe from './components/Recipe.vue'
 
+const rec = {
+  id: 1,
+  name: "food",
+  author: "bobby",
+  submitter: "bobby",
+  course: "entree",
+  tags: ["beef"],
+  ingredients: [
+    {
+      name: "salt",
+      quantity: {
+        amount: 1,
+        measure: "Tablespoon"
+      }
+    }
+  ],
+  canDouble: true
+}
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Recipe: rec
   }
 }
 </script>

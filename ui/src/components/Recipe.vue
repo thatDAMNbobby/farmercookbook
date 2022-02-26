@@ -1,8 +1,15 @@
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Recipe',
   props: {
-    msg: String
+    id: Number,
+    name: String,
+    author: String,
+    submitter: String,
+    course: String,
+    tags: Array,
+    ingredients: Array,
+    canDouble: Boolean,
   }
 }
 </script>

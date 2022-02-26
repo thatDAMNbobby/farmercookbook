@@ -20,6 +20,24 @@ test:
 	go test -coverprofile=cover.out `go list ./... | grep -v generatedmocks`
 .PHONY: test
 
+run-local:
+	make docker-deps-start
+	PATH=$(PATH):$(HOME)/go/bin godotenv -f .env.local go run .
+.PHONY: local
+
+docker-deps-start:
+	COMPOSE_PROJECT_NAME=test docker-compose up -d
+.PHONY: docker-deps-start
+
+docker-deps-stop:
+	COMPOSE_PROJECT_NAME=test docker-compose down
+.PHONY: docker-deps-stop
+
+docker-deps-restart:
+	make docker-deps-stop
+	make docker-deps-start
+.PHONY: docker-deps-restart
+
 fmt:
 	gofmt -s -w .
 .PHONY: fmt
