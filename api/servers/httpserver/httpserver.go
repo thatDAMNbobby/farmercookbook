@@ -8,6 +8,7 @@ import (
 	"github.com/thatDAMNbobby/farmercookbook/appcontext/handlers"
 	"github.com/thatDAMNbobby/farmercookbook/config"
 	"github.com/thatDAMNbobby/farmercookbook/servers/httpserver/routes/health"
+	"github.com/thatDAMNbobby/farmercookbook/servers/httpserver/routes/index"
 	"github.com/thatDAMNbobby/farmercookbook/servers/httpserver/routes/search"
 	"github.com/thatDAMNbobby/farmercookbook/servers/runnable"
 	"github.com/thatDAMNbobby/farmercookbook/servers/server"
@@ -40,6 +41,8 @@ func newRouter(handlers *handlers.Handlers) http.Handler {
 
 	apiRouter := router.PathPrefix("/api").Subrouter()
 	search.Register(apiRouter, "/search", handlers)
+
+	index.Register(apiRouter, "/index", handlers)
 
 	v1Router := apiRouter.PathPrefix("/v1").Subrouter()
 	health.Register(v1Router, "/health", handlers)

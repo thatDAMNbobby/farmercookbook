@@ -1,4 +1,4 @@
-package elasticsearch
+package requests
 
 import "github.com/olivere/elastic/v7"
 

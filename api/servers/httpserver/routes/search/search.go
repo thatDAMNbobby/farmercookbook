@@ -9,5 +9,5 @@ import (
 func Register(parentRouter *mux.Router, pathPrefix string, handlers *handlers.Handlers) {
 	router := parentRouter.PathPrefix(pathPrefix).Subrouter()
 
-	router.HandleFunc("/", http.HandlerFunc(handlers.Search.Query)).Methods("GET")
+	router.HandleFunc("/search", http.HandlerFunc(handlers.Search.Query)).Methods("GET")
 }

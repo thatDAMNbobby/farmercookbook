@@ -1,7 +1,5 @@
 package models
 
-import "math/big"
-
 type Measure int
 
 const (
@@ -15,7 +13,7 @@ const (
 )
 
 type Measurement struct {
-	Amount  big.Rat
+	Amount  float64
 	Measure Measure
 }
 

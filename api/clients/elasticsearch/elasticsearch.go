@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/olivere/elastic/v7"
 	"github.com/pkg/errors"
+	"github.com/thatDAMNbobby/farmercookbook/clients/elasticsearch/requests"
 	"time"
 )
 
@@ -18,7 +19,9 @@ type Config struct {
 }
 
 type Elasticsearch interface {
-	Search(ctx context.Context, request *SearchRequest) (*elastic.SearchResult, error)
+	Search(ctx context.Context, request *requests.SearchRequest) (*elastic.SearchResult, error)
+	Delete(ctx context.Context, request *requests.DeleteRequest) error
+	Upsert(ctx context.Context, request *requests.UpsertRequest) error
 	Ping(ctx context.Context) error
 	GetName() string
 }
@@ -51,7 +54,7 @@ func New(config *Config) Elasticsearch {
 	}
 }
 
-func (impl *impl) Search(ctx context.Context, request *SearchRequest) (*elastic.SearchResult, error) {
+func (impl *impl) Search(ctx context.Context, request *requests.SearchRequest) (*elastic.SearchResult, error) {
 
 	search := impl.search.
 		Search(request.Indices...).
@@ -59,12 +62,12 @@ func (impl *impl) Search(ctx context.Context, request *SearchRequest) (*elastic.
 		From(request.From).
 		Size(request.Size).
 		SortBy(request.Sort...)
-
 	resp, err := search.Do(ctx)
 	if err != nil {
 		return nil, err
 	}
 
+	fmt.Printf("%s: %d hits\n", request.Indices, resp.TotalHits())
 	return resp, nil
 }
 
@@ -84,4 +87,26 @@ func (impl *impl) Ping(ctx context.Context) error {
 
 func (impl *impl) GetName() string {
 	return "elasticsearch"
+}
+
+func (impl *impl) Delete(ctx context.Context, request *requests.DeleteRequest) error {
+	_, err := impl.index.Delete().Index(request.Index).Id(request.Id).Do(ctx)
+	if err != nil {
+		return errors.WithStack(err)
+	}
+	return nil
+}
+
+func (impl *impl) Upsert(ctx context.Context, request *requests.UpsertRequest) error {
+	var err error
+	if request.Id == nil {
+		_, err = impl.index.Index().Index(request.Index).BodyJson(request.Body).Do(ctx)
+	}
+	if request.Id != nil {
+		_, err = impl.index.Index().Index(request.Index).Id(*request.Id).BodyJson(request.Body).Do(ctx)
+	}
+	if err != nil {
+		return errors.WithStack(err)
+	}
+	return nil
 }

@@ -4,12 +4,15 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/thatDAMNbobby/farmercookbook/clients/database"
 	"github.com/thatDAMNbobby/farmercookbook/clients/elasticsearch"
+	"github.com/thatDAMNbobby/farmercookbook/clients/render"
 	"github.com/thatDAMNbobby/farmercookbook/config"
+	renderLib "github.com/unrolled/render"
 )
 
 type Clients struct {
 	Elasticsearch elasticsearch.Elasticsearch
 	DynamoDB      database.Database
+	Render        render.Render
 }
 
 func New(config *config.Config) *Clients {
@@ -24,6 +27,7 @@ func New(config *config.Config) *Clients {
 				SearchRetryMaxMS: config.Elasticsearch.SearchRetryMaxMS,
 			}),
 		DynamoDB: database.New(buildDynamoDBConfig(config.Database, "something")),
+		Render:   render.New(&render.Deps{Render: renderLib.New()}),
 	}
 }
 

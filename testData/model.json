@@ -10,17 +10,19 @@
   ],
   "ingredients": [
     {
+      "id": 1,
       "name": "water",
       "quantity": {
-        "amount": "1/4",
-        "measure": "cup"
+        "amount": 1,
+        "unit": "cup"
       }
     },
     {
+      "id": 2,
       "name": "soy sauce",
       "quantity": {
         "amount": 1,
-        "measure": "tablespoon"
+        "unit": "tablespoon"
       }
     }
   ],

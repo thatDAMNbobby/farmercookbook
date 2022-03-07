@@ -23,7 +23,7 @@ func main() {
 
 	serversImpl := servers.New(
 		&servers.Deps{Handlers: appcontextImpl.Handlers},
-		&configImpl.Server,
+		configImpl.Server,
 	)
 
 	waitForInterrupts(configImpl.Name, serversImpl, appcontextImpl)
