@@ -1,4 +1,4 @@
-<template>
+            <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -26,8 +26,13 @@ const rec = {
 }
 export default {
   name: 'App',
-  components: {
+  Components: {
     Recipe: rec
+  }
+}
+Recipe.data = function() {
+  return {
+    recipe: rec
   }
 }
 </script>
