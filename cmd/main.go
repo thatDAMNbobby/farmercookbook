@@ -43,7 +43,6 @@ func main() {
 
 	utils.PrintDebugJSON("user store", userStore)
 	utils.PrintDebugJSON("session", sessionStore)
-	utils.PrintDebugJSON("recipe", recipeStore)
 
 	homeHandler := handlers.NewHomeHandler(handlers.HomeHandlerDeps{Tmpl: tmpl}).ServeHTTP
 	recipesHandler := handlers.NewRecipesHandler(handlers.RecipesHandlerDeps{Store: recipeStore, Tmpl: tmpl})
@@ -53,6 +52,8 @@ func main() {
 	gRouter.HandleFunc("/recipes", recipesHandler.GetRecipes).Methods("GET")
 	gRouter.HandleFunc("/recipes", recipesHandler.CreateRecipe).Methods("POST")
 	gRouter.HandleFunc("/recipes/new", recipesHandler.NewRecipe).Methods("GET")
+	gRouter.HandleFunc("/recipes/search", recipesHandler.FindRecipes).Methods("GET")
+	gRouter.HandleFunc("/recipes/{id}", recipesHandler.GetRecipe).Methods("GET")
 	gRouter.HandleFunc("/recipes/{id}", recipesHandler.DeleteRecipe).Methods("DELETE")
 
 	http.ListenAndServe(":4000", gRouter)

@@ -5,35 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4da7afe1-aa4f-4a9b-b215-32863767456b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.air.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/docker-compose.dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev/scripts/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/handlers/gethome.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/handlers/recipes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/hash/hash.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/hash/mock/mock.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/hash/passwordhash/passwordhash.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/middleware/middleware.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/middleware/middleware_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/store/db/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/session.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/store/store.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/utils/utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/addRecipeForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/recipeDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/recipeList-backup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/recipeList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/updateRecipeForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b312d96e-fa4f-4d4c-b64d-a1d1726f76e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b312d96e-fa4f-4d4c-b64d-a1d1726f76e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taskfile.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/app" beforeDir="false" afterPath="$PROJECT_DIR$/bin/app" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/handlers/recipes.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/recipes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/store/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/store/store.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/build-errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/build-errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go Application" />
-        <option value="Go File" />
         <option value="HTTP Request" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -63,6 +50,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -74,32 +64,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.go build main.go.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "htmx.bundled.context.provider.enabled": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/bobbywettig/farmercookbook/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build main.go.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;htmx.bundled.context.provider.enabled&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bobbywettig/farmercookbook/templates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
@@ -136,7 +130,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-e9a9b764149b-intellij.indexing.shared.core-IU-251.21418.62" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a163169533b-JavaScript-IU-251.21418.62" />
       </set>
     </attachedChunks>
   </component>
@@ -152,11 +147,26 @@
       <workItem from="1740000266653" duration="57000" />
       <workItem from="1740000324317" duration="13360000" />
       <workItem from="1740090245999" duration="21314000" />
+      <workItem from="1740191200071" duration="254000" />
+      <workItem from="1740191499074" duration="670000" />
+      <workItem from="1740192701908" duration="205000" />
+      <workItem from="1740192924135" duration="7847000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

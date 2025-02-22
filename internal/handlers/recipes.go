@@ -34,8 +34,6 @@ func (h *RecipesHandler) GetRecipes(w http.ResponseWriter, r *http.Request) {
 		log.Fatalln(err)
 	}
 
-	log.Printf("recipes: %v", recipes)
-
 	err = h.tmpl.ExecuteTemplate(w, "recipeList", recipes)
 	if err != nil {
 		log.Fatal(err)
@@ -67,21 +65,18 @@ func (h *RecipesHandler) CreateRecipe(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	utils.PrintDebugJSON("recipe", recipe)
-	utils.PrintDebugJSON("result", result)
+	log.Println(result)
 
 	http.Redirect(w, r, "/recipes", http.StatusSeeOther)
 }
 
 func (h *RecipesHandler) GetRecipe(w http.ResponseWriter, r *http.Request) {
-	idStr := r.FormValue("id")
-	idInt, err := strconv.Atoi(idStr)
-	if err != nil {
-		log.Println(err)
-		idInt = 0
-	}
-	recipe, err := h.store.GetRecipe(idInt)
+	vars := mux.Vars(r)
+	recipeId, _ := strconv.Atoi(vars["id"])
+
+	utils.PrintDebugJSON("vars", vars)
+
+	recipe, err := h.store.GetRecipe(recipeId)
 	if err != nil {
 		log.Println(err)
 	}
@@ -133,7 +128,6 @@ func (h *RecipesHandler) UpdateRecipe(w http.ResponseWriter, r *http.Request) {
 func (h *RecipesHandler) DeleteRecipe(w http.ResponseWriter, r *http.Request) {
 	log.Println("DeleteRecipe")
 	vars := mux.Vars(r)
-	utils.PrintDebugJSON("vars", vars)
 	recipeId, _ := strconv.Atoi(vars["id"])
 	err := h.store.DeleteRecipe(recipeId)
 	if err != nil {
@@ -141,4 +135,19 @@ func (h *RecipesHandler) DeleteRecipe(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, "/recipes", http.StatusSeeOther)
+}
+
+func (h *RecipesHandler) FindRecipes(w http.ResponseWriter, r *http.Request) {
+	log.Println("FindRecipes")
+	err := r.ParseForm()
+	utils.PrintDebugJSON("form", r.Form)
+
+	recipes, err := h.store.FindRecipes(r.Form["query"][0])
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	utils.PrintDebugJSON("recipes", recipes)
+
+	err = h.tmpl.ExecuteTemplate(w, "recipeList", recipes)
 }

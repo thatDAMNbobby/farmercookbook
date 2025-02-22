@@ -4,6 +4,10 @@ APP_NAME ?= app
 vet:
 	go vet ./...
 
+.PHONY: get
+get:
+	go get -v ./...
+
 .PHONY: staticcheck
 staticcheck:
 	staticcheck ./...

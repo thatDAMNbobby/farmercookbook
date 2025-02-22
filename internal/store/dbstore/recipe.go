@@ -2,8 +2,9 @@ package dbstore
 
 import (
 	"farmercookbook/internal/store"
-	"farmercookbook/internal/utils"
+	"fmt"
 	"gorm.io/gorm"
+	"log"
 )
 
 type RecipeStore struct {
@@ -31,6 +32,7 @@ func (s *RecipeStore) CreateRecipe(recipe *store.Recipe) (*store.Recipe, error) 
 }
 
 func (s *RecipeStore) GetRecipe(id int) (*store.Recipe, error) {
+	log.Println("GetRecipe")
 	var recipe store.Recipe
 
 	err := s.db.First(&recipe, id).Error
@@ -42,15 +44,13 @@ func (s *RecipeStore) GetRecipe(id int) (*store.Recipe, error) {
 	return &recipe, nil
 }
 
-func (s *RecipeStore) GetRecipes(max int) ([]*store.Recipe, error) {
-	var recipes []*store.Recipe
+func (s *RecipeStore) GetRecipes(max int) ([]store.Recipe, error) {
+	var recipes []store.Recipe
 
 	err := s.db.Limit(max).Find(&recipes).Error
 	if err != nil {
 		return nil, err
 	}
-
-	utils.PrintDebugJSON("recipes", recipes)
 	return recipes, nil
 }
 
@@ -72,4 +72,16 @@ func (s *RecipeStore) DeleteRecipe(id int) error {
 	}
 
 	return nil
+}
+
+func (s *RecipeStore) FindRecipes(query string) ([]store.Recipe, error) {
+	log.Println(query)
+	var recipes []store.Recipe
+	q := fmt.Sprintf("%%%s%%", query)
+	err := s.db.Where("name like ?", q).Find(&recipes).Error
+	if err != nil {
+		return recipes, err
+	}
+
+	return recipes, nil
 }

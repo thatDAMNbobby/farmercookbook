@@ -42,7 +42,8 @@ type SessionStore interface {
 type RecipeStore interface {
 	CreateRecipe(recipe *Recipe) (*Recipe, error)
 	GetRecipe(id int) (*Recipe, error)
-	GetRecipes(max int) ([]*Recipe, error)
+	GetRecipes(max int) ([]Recipe, error)
 	UpdateRecipe(recipe *Recipe) (*Recipe, error)
 	DeleteRecipe(id int) error
+	FindRecipes(query string) ([]Recipe, error)
 }
