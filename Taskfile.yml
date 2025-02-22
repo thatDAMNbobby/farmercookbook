@@ -1,0 +1,39 @@
+version: '3'
+
+tasks:
+  default:
+    desc: Display all available tasks.
+    cmds:
+      - task: list
+
+  list:
+    desc: List all tasks.
+    cmds:
+      - task -l
+
+  dev:
+    desc: Run the application in development mode.
+    cmds:
+      - docker-compose -f ./dev/docker-compose.yml -f ./dev/docker-compose.dev.yml up
+
+  build:
+    desc: Build the application for production.
+    cmds:
+      - go build -ldflags "-X main.Environment=production" -o ./bin/app ./cmd/main.go
+
+  lint:
+    desc: Uses golangci-lint
+    cmds:
+      - golangci-lint run
+
+  fmt:
+    desc: Reformat code
+    cmds:
+      - go fmt ./...
+
+  tidy:
+    desc: Tidy go.sum.
+    cmds:
+      - go mod tidy
+
+

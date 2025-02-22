@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4da7afe1-aa4f-4a9b-b215-32863767456b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.air.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/docker-compose.dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev/scripts/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handlers/gethome.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/handlers/recipes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/hash/hash.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/hash/mock/mock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/hash/passwordhash/passwordhash.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/middleware/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/middleware/middleware_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/store/db/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/session.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/store/dbstore/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/store/store.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/utils/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/addRecipeForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipeDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipeList-backup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipeList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/updateRecipeForm.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2tHDeyQn8LOWqQfntP4hNiJnwpg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build main.go.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "htmx.bundled.context.provider.enabled": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/bobbywettig/farmercookbook/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/internal/handlers" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/internal" />
+      <recent name="$PROJECT_DIR$/dev" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/store" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="farmercookbook" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="farmercookbook" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4da7afe1-aa4f-4a9b-b215-32863767456b" name="Changes" comment="" />
+      <created>1740000205935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740000205935</updated>
+      <workItem from="1740000206992" duration="51000" />
+      <workItem from="1740000266653" duration="57000" />
+      <workItem from="1740000324317" duration="13360000" />
+      <workItem from="1740090245999" duration="21314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

@@ -1,0 +1,36 @@
+{{define "recipeList"}}
+<div id="recipeList" class="container-fluid">
+    <div class="row row-cols-6 g-6">
+        <div class="col-3">
+            <p class="text-center fs-1 fw-bold">All Recipes</p>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary" hx-get="/recipes" hx-target="#recipeList" hx-swap="innerHTML">
+                Refresh
+            </button>
+            <button class="btn btn-primary" hx-get="/recipes/new" hx-target="#recipeList" hx-swap="innerHTML">
+                Add Recipe
+            </button>
+        </div>
+    </div>
+    <div class="row row-cols-4 g-4">
+    {{range .}}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-fluid" style="width: 18rem; height: 20rem;" src="{{ .Image }}" alt="{{.Name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{.Name}}</h5>
+                    <p class="card-text">{{.Description}}</p>
+                    <button class="btn btn-primary" hx-get="/recipes/{{.Id}}" hx-target="#recipeList" hx-swap="outerHTML">
+                        Edit
+                    </button>
+                    <button class="btn btn-danger" hx-delete="/recipes/{{.Id}}" hx-target="#recipeList" hx-swap="outerHTML">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{end}}
+    </div>
+</div>
+{{end}}

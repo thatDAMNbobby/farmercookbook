@@ -1,0 +1,41 @@
+{{define "recipeList"}}
+<div id="recipeList" class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <h2>Recipes</h2>
+        </div>
+
+        <div class="container">
+            {{range .}}
+            <div class="row">
+                <div class="col-6">
+                    <div class="img">
+                        <img src="{{ .Image }}" alt="{{.Name}}">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h3>{{.Name}}</h3>
+                    <p>{{.Description}}</p>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-primary" hx-get="/recipes/{{.Id}}" hx-target="#recipeList" hx-swap="outerHTML">
+                        Edit
+                    </button>
+                    <button class="btn btn-danger" hx-delete="/recipes/{{.Id}}" hx-target="#recipeList" hx-swap="outerHTML">
+                        Delete
+                    </button>
+                </div>
+            </div>
+            {{end}}
+        <div class="col-6">
+            <button class="btn btn-primary" hx-get="/recipes" hx-target="#recipeList" hx-target="innerHTML">
+                Refresh
+            </button>
+            <button class="btn btn-primary" hx-get="/recipes" hx-target="#recipeList" hx-target="innerHTML">
+                Add Recipe
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+{{end}}

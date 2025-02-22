@@ -1,0 +1,16 @@
+{{define "addRecipeForm"}}
+<form>
+    <div>
+        <input type="text" class="form-control" name="name" placeholder="Recipe Name">
+        <input type="text" class="form-control" name="image" placeholder="Image">
+        <input type="text" class="form-control" name="description" placeholder="Description">
+        <input type="text" class="form-control" name="ingredients" placeholder="Ingredients">
+        <input type="text" class="form-control" name="steps" placeholder="Steps">
+    </div>
+    <div class="mt-2">
+        <button class="btn btn-primary" hx-post="/recipes" hx-target="#recipeList">
+            Save
+        </button>
+    </div>
+</form>
+{{end}}
