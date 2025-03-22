@@ -16,7 +16,7 @@
     <div class="row row-cols-4 g-4">
     {{range .}}
         <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" hx-get="/recipes/{{.Id}}" hx-target="#main" hx-swap="outerHTML">
                 <img class="card-img-top img-fluid" style="width: 18rem; height: 20rem;" src="{{ .Image }}" alt="{{.Name}}">
                 <div class="card-body">
                     <h5 class="card-title">{{.Name}}</h5>

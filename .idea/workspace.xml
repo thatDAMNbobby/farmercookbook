@@ -6,20 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4da7afe1-aa4f-4a9b-b215-32863767456b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b312d96e-fa4f-4d4c-b64d-a1d1726f76e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b312d96e-fa4f-4d4c-b64d-a1d1726f76e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taskfile.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/app" beforeDir="false" afterPath="$PROJECT_DIR$/bin/app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookbook" beforeDir="false" afterPath="$PROJECT_DIR$/cookbook" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers/recipes.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/recipes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/store/dbstore/recipe.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/store/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/store/store.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/build-errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/build-errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recipeDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipeDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recipeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipeList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,8 +120,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-e9a9b764149b-intellij.indexing.shared.core-IU-251.21418.62" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a163169533b-JavaScript-IU-251.21418.62" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -151,6 +141,11 @@
       <workItem from="1740191499074" duration="670000" />
       <workItem from="1740192701908" duration="205000" />
       <workItem from="1740192924135" duration="7847000" />
+      <workItem from="1740202701182" duration="193000" />
+      <workItem from="1740441010430" duration="73000" />
+      <workItem from="1740536033747" duration="1927000" />
+      <workItem from="1742615518748" duration="22000" />
+      <workItem from="1742616241435" duration="1327000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,8 @@
 {{define "nav"}}
 <div class="hidden lg-block">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">FarmerCookbook</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/">FarmerCookbook</a>
+    <div>
         <span class="mt-[2px] h-[40px] w-[1px] bg-borderdark mx-6 "></span>
         <form class="form-inline" hx-get="/recipes/search" hx-target="#recipeList" hx-trigger="submit">
             <input name="query" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

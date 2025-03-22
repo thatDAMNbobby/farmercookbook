@@ -1,10 +1,12 @@
 {{define "recipeDetail"}}
-<div id="recipe" class="card mt-2">
+<div id="recipeCard" class="card mt-2">
     <div class="card-body">
         <h5 class="card-title">{{.Name}}</h5>
         <p class="card-text">{{.Description}}</p>
         <p class="card-text">{{.Ingredients}}</p>
         <p class="card-text">{{.Directions}}</p>
+
+        <p class="card-text">Blah blah</p>
         <button class="btn btn-primary" hx-get="/recipes/{{.Id}}" hx-target="#recipeList" hx-swap="outerHTML">
             Edit
         </button>
